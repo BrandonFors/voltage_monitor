@@ -208,9 +208,9 @@ void app_main() {
   xTaskCreatePinnedToCore(
     calc_avg,
     "Calculate ADC Avg",
-    1024,
+    2048,
     NULL,
-    1,
+    3,
     &processing_task,
     app_cpu
   );

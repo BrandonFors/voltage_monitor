@@ -116,7 +116,7 @@ void blink_led(void *parameters) {
     gpio_set_level(LED_BUILTIN, 0);
     vTaskDelay(1000 / portTICK_PERIOD_MS);
   }
-
+  
 }
 
 void interface(void *parameters){
@@ -126,7 +126,6 @@ void interface(void *parameters){
   char avg_string[10];
   while(1){
     //read from avg if recieved message
-    // Write data to UART.
     //handler user input
 
     if(usb_serial_jtag_read_bytes(&c, sizeof(char), 0) > 0){
